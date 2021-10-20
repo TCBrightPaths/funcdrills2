@@ -11,7 +11,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-let expression = " "
+let expression = "this one is correct"
 
 
 
@@ -26,7 +26,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-let arrow = " "
+let arrow = "this one is correct "
 // declaration
 // expression
 
@@ -52,7 +52,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+let declaration = 'this one is correct'
 // expression
 
 
@@ -63,9 +63,9 @@ function exclaimFour(str) {
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
+let jsNinja = () => "I am a JavaScript ninja!"
 
-
+console.log(jsNinja());
 
 ////////// PROBLEM 5 //////////
 
@@ -78,7 +78,14 @@ function exclaimFour(str) {
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+let compareNums = (n1, n2) => {
+  if (n1 > n2) {
+    return n1;
+  } else {
+    return n2;
+  }
+}
+console.log(compareNums(1,2));
 
   
 ////////// PROBLEM 6 //////////
