@@ -5,8 +5,12 @@
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-// CODE HERE
-
+let multiply = (n1,n2, fn) => {
+  return function(n1,n2) {
+    n1 * n2
+  }
+}
+console.log(multiply(2,2));
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
