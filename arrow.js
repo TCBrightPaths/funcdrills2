@@ -11,7 +11,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
- expression
+let expression = " "
 
 
 
@@ -26,7 +26,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
- arrow
+let arrow = " "
 // declaration
 // expression
 
@@ -37,7 +37,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => `${str.toUpperCase()} !!!`
+console.log(exclaimThree('hello'));
 
 ////////// PROBLEM 3 //////////
 
