@@ -101,4 +101,5 @@ console.log(compareNums(1,2));
     that out)
 */
 
-//CODE HERE
+let bestMovie = str => `${str.toUpperCase()} is the best movie ever!`
+console.log(bestMovie("sharknado"));
