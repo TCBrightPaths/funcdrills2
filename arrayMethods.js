@@ -144,8 +144,11 @@ function filterBob (item) {
   }
 }
 let bobsPurchases = purchases.filter(filterBob);
+let bobPrice = bobsPurchases.map(x => x.price)
+console.log(bobPrice);
+
 
 
 let reduceBob = (acc, curr) => acc + curr; 
-let bobsTotal = bobsPurchases.reduce(reduceBob);
+let bobsTotal = bobPrice.reduce(reduceBob);
 console.log(bobsTotal);
