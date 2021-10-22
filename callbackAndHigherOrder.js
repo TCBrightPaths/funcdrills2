@@ -64,7 +64,7 @@ let last = (arr, fn) => fn(arr[arr.length-1]);
 
 last(names, lastName => {
   console.log('The last name in names is ' + lastName)
-})
+});
 
 
 
@@ -90,7 +90,7 @@ let contains = (arr, name, fn) => {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
- contains(names, 'Colt', result => {
+contains(names, 'Colt', result => {
    if(result === true){
      console.log('Colt is in the array')
    } else {
@@ -108,15 +108,10 @@ let contains = (arr, name, fn) => {
   Hint: you can use a nested for loop to do this.
 */
 
-let uniq = (arr, fn) => {
-  for(i=0; i<arr.length; i++) {
-    let newArr = []
-    if(newArr.has(arr[i]) === false) {
-        newArr.push(arr[i]);
-    }
-  }
-  fn(newArr);
-}
+ let uniq = (arr, fn) => {
+   let modArray = [...new Set(arr)];
+   fn(modArray);
+ }
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -125,10 +120,9 @@ let uniq = (arr, fn) => {
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-uniq(names, fn =>
-  )
-
-
+uniq(names, function(uniqArr) {
+  console.log(`The new names array with all the duplicate items removed is ${uniqArr}`);
+});
 
 ////////// PROBLEM 6 //////////
 
@@ -137,7 +131,11 @@ uniq(names, fn =>
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
+// let each = (arr, fn) => {
+//   for(let key in arr) {
+//     fn(key, arr[key])
+//   }
+// }
 
 
 /*
@@ -147,7 +145,9 @@ uniq(names, fn =>
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+// each(names, whereNames (item, index) => {
+//   return (`The item at index ${index} is ${item}`)
+// });
 
 
 ////////// PROBLEM 7 //////////
