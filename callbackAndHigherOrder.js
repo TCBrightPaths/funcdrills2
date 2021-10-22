@@ -131,11 +131,11 @@ uniq(names, function(uniqArr) {
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// let each = (arr, fn) => {
-//   for(let key in arr) {
-//     fn(key, arr[key])
-//   }
-// }
+ let each = (arr, fn) => {
+   for(let name in arr) {
+     fn(name, arr[name])
+   }
+ }
 
 
 /*
@@ -145,9 +145,9 @@ uniq(names, function(uniqArr) {
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// each(names, whereNames (item, index) => {
-//   return (`The item at index ${index} is ${item}`)
-// });
+each(names, function(index, item) {
+  console.log(`The item at index ${index} is ${item}`)
+});
 
 
 ////////// PROBLEM 7 //////////
