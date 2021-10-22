@@ -180,16 +180,23 @@ var users = [
 ]
 // Do not edit the code above.
 
-// CODE HERE 
+function getUserById (arr, id, fn) {
+  
+  for(let x in arr) {
+    if(arr[x].id === id) {
+      fn(arr[x]);
+    }
+  }
+}
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+ })
 
 ////////// CHALLENGE //////////
 
